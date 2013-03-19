@@ -411,8 +411,6 @@ function set_stuff_for_environment()
 {
     set_lunch_paths
     set_sequence_number
-
-    export ANDROID_BUILD_TOP=$(gettop)
 }
 
 function set_sequence_number()
@@ -2100,3 +2098,5 @@ if [ -z ${CCACHE_EXEC} ]; then
         echo -e "\e[31m\e[1mccache not found/installed!\e[0m"
     fi
 fi
+
+export ANDROID_BUILD_TOP=$(gettop)
